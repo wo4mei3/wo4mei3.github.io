@@ -21,7 +21,7 @@ However, the syntax rules themselves are simple, so you should be able to get us
 The syntax rules in this article are a modified version of the ones in K&R C, the bible for C programmers, which is often cited as a reference for C syntax rules.
 
 # BNF Notation and Rightmost Derivation
-(Supplement: This chapter is written based on the following article. I think this one is easier to understand)
+(Supplement: This chapter is written based on the following article. I think these aratcles are easier to understand)
 [https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
 [https://en.wikipedia.org/wiki/Context-free_grammar#Derivations_and_syntax_trees](https://en.wikipedia.org/wiki/Context-free_grammar#Derivations_and_syntax_trees)
 
@@ -51,7 +51,7 @@ For example, the binary number 101 can be obtained as follows.
 ```
 Derivation is the process of applying a syntax rule to a non-terminal symbol, called a start symbol, to obtain an arbitrary expression, as described above.
 
-There are two strategies for derivation. One is left-end derivation, in which syntax rules are applied sequentially starting from the left-most non-terminal symbol and replacing the symbol, and the other is rightmost derivation, in which syntax rules are applied sequentially starting from the right-most non-terminal symbol.
+There are two strategies for derivation. One is leftmost derivation, in which syntax rules are applied sequentially starting from the left-most non-terminal symbol and replacing the symbol, and the other is rightmost derivation, in which syntax rules are applied sequentially starting from the right-most non-terminal symbol.
 
 Now let's look at how to get the binary number 101 with rightmost derivation.
 ```
@@ -116,9 +116,8 @@ When these syntax rules are applied, we will have a stack for each declarations 
 
 This stack will contain "pointer of" when a rule corresponding to a pointer type is read ("const pointer of" if it is a const pointer type), "array [ " + integer + " ] of" when a rule corresponding to an array type is read, "array of" when a rule corresponding to a function type When a rule corresponding to a function type is read, various strings such as "function ( " + parameter-type-list + " ) returning" are inserted.
 
-After all the replacements of the part of the declaration <declarator> in the syntax rule (1) are done, the strings in the stack are taken out from the top here.
-Starting with the variable name obtained by the syntax rule (8), from left to right,
-The strings are connected in the order in which they were taken out, from left to right, starting with the variable name obtained by the syntax rule (8). Finally, by adding the symbols obtained in the declaration-specifier-list to the rightmost position, we have the English readings corresponding to the declarations.
+After all the replacements of the part of the \<declarator> in the syntax rule (1) are done, the strings in the stack are taken out from the top here and arranged from left to right adding the variable name obtained by the syntax rule (8) for the leftmost position.
+Finally, by adding the symbols obtained in the declaration-specifier-list to the rightmost position, we have the English readings corresponding to the declarations.
 
 Now, let's try out the actual right-most derivation of various C declarations in the next section.
 
