@@ -218,7 +218,6 @@ Let's go back.
 -> <declaration-specifier-list> ( * <direct-declarator> [10] ) ( int a , int b ) # Apply (10) Put "array [ 10 ] of" in the stack.
 -> <declaration-specifier-list> ( * ( <declarator> ) [10] ) ( int a , int b ) #apply (9)
 -> <declaration-specifier-list> ( * ( * <declarator> ) [10] ) ( int a , int b ) #(5) is applied Put "pointer of" in the stack.
-
 -> <declaration-specifier-list> ( * ( * <direct-declarator> ) [10] ) ( int a , int b ) #(7) applies
 -> <declaration-specifier-list> ( * ( * p ) [10] ) ( int a , int b ) #(8) is applied
 -> bool ( * ( * p ) [10] ) ( int a , int b ) #apply (2), (4)
@@ -261,8 +260,6 @@ We now have a simple English notation for the declaration. From now on, we no lo
 -> <declaration-specifier-list> <direct-declarator> ( int b ) #I was able to derive int b. Put "function ( b int ) returning" in the stack.
 -> <declaration-specifier-list> ( <declarator> ) ( int b ) #apply (9)
 -> <declaration-specifier-list> ( * <declarator> ) ( int b ) #(5) is applied Put "pointer of" in the stack.
-
-
 -> <declaration-specifier-list> ( * <direct-declarator> ) ( int b ) #(7) is applied
 -> <declaration-specifier-list> ( * <direct-declarator> ( <parameter-type-list> ) ) ( int b ) #(11) applies
 -> <declaration-specifier-list> ( * <direct-declarator> ( <parameter-type-list> , <declaration> ) ) ( int b ) #(14) applies
@@ -313,10 +310,8 @@ Now that we have the English notation for the ```void(*func)(int a)``` part, let
 -> <declaration-specifier-list> ( * <direct-declarator> ( <parameter-type-list> , void(*func)(int a)) ) ( int b ) #we could derive void(*func)(int a)
 -> <declaration-specifier-list> ( * <direct-declarator> ( <declaration>, void(*func)(int a)) ) ( int b ) #(13) applied
 -> <declaration-specifier-list> ( * <direct-declarator> ( int sig, void(*func)(int a)) ) ( int b ) #I could derive int sig. Put "function ( sig int , func pointer of function ( a int ) returning void ) returning" in the stack.
-
 -> <declaration-specifier-list> ( * signal ( int sig, void(*func)(int a)) ) ( int b ) #(8) is applied
 -> void ( * signal ( int sig, void(*func)(int a)) ) ( int b ) #Apply (2), (4)
-
 -> void ( * signal ( int sig, void(*func)(int a)) ) ( int b ) #Apply (2), (4)````Here the stack looks like this from the top."function ( sig int , func pointer of function ( a int ) returning void ) returning""pointer of""function ( b int ) returning"
 ```
 Here, the stack looks like this from top to bottom:
