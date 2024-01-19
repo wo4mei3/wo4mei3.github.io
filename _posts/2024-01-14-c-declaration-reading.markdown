@@ -312,8 +312,8 @@ Now that we have the English notation for the ```void(*func)(int a)``` part, let
 -> <declaration-specifier-list> ( * <direct-declarator> ( int sig, void(*func)(int a)) ) ( int b ) #I could derive int sig. Put "function ( sig int , func pointer of function ( a int ) returning void ) returning" in the stack.
 -> <declaration-specifier-list> ( * signal ( int sig, void(*func)(int a)) ) ( int b ) #(8) is applied
 -> void ( * signal ( int sig, void(*func)(int a)) ) ( int b ) #Apply (2), (4)
--> void ( * signal ( int sig, void(*func)(int a)) ) ( int b ) #Apply (2), (4)````Here the stack looks like this from the top."function ( sig int , func pointer of function ( a int ) returning void ) returning""pointer of""function ( b int ) returning"
 ```
+
 Here, the stack looks like this from top to bottom:
 ```
 "function ( sig int , func pointer of function ( a int ) returning void ) returning"
