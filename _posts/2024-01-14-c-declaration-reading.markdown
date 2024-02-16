@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Dymystifying declarations in C language."
-date:   2024-01-15 7:00:00 +0900
-lang: zh
+date:   2024-01-14 6:00:00 +0900
+categories: jekyll update
 ---
 
 # Introduction
