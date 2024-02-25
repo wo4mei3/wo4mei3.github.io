@@ -7,10 +7,10 @@ categories: jekyll update
 
 # Introduction
 
-Nice to meet you, my name is Kuma. I am currently working on my own C formatter called [mic](https://github.com/wo4mei3/mic). I intend to develop it into my own original c dialect to raw c transpiler someday. I chose OCaml as my language of choice because I feel that functional languages are cool. There is still a lot of work that needs to be done, and I am already feeling a bit overwhelmed, but I want to finish it.
+Nice to meet you, my name is Kuma. I am currently working on my own C formatter called [mic](https://github.com/wo4mei3/mic). I intend to develop it into a transpiler that transpiles my own original c dialect into raw c language someday. I chose OCaml because I feel that functional languages are cool. There is still a lot of work that needs to be done, and I am already feeling a bit overwhelmed, but I want to finish it.
 
 Now, I would like to explain how to read declarations in C language.
-The only two things that would be desirable to know when reading this article are the BNF notation and the rightmost derivation, but you don't have to know them at all since they will be explained step by step later.
+The only two things that would be desirable to know about when reading this article are the BNF notation and the rightmost derivation, but you don't have to know about them at all since they will be explained step by step later.
 
 After reading this article, you will be able to mechanically decipher any complex declarations using a unified and theoretical methodology such as rightmost derivation, without having to deal with the concept of precedence, which is often introduced in documents around the world.
 
@@ -21,7 +21,7 @@ However, the syntax rules themselves are simple, so you should be able to get us
 The syntax rules in this article are a modified version of the ones in K&R C, the bible for C programmers, which is often cited as a reference for C syntax rules.
 
 # BNF Notation and Rightmost Derivation
-(Supplement: This chapter is written based on the following article. I think these aratcles are easier to understand)
+(Supplement: This chapter is written based on the following article, but I think these aratcles are easier to understand)
 [https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
 [https://en.wikipedia.org/wiki/Context-free_grammar#Derivations_and_syntax_trees](https://en.wikipedia.org/wiki/Context-free_grammar#Derivations_and_syntax_trees)
 
