@@ -21,7 +21,7 @@
 title: Kuma's blog
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi. I'm Kuma-san, 22 years old and live in Japan, and also the author of mic programming language.
+  Hi. I'm Kuma-san, 23 years old and live in Japan, and also the author of mic programming language.
   Thank you for visiting ʕ•ᴥ•ʔ
 domain: wo4mei3.github.io
 # baseurl: wo4mei3.github.io  the subpath of your site, e.g. /blog
