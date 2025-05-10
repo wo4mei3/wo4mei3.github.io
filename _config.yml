@@ -30,7 +30,7 @@ url: https://wo4mei3.github.io  # the base hostname & protocol for your site, e.
 # Build settings
 # theme: minima
 
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
 
 plugins:
   - jekyll-feed
@@ -57,10 +57,9 @@ plugins:
 
 timezone: Asia/Tokyo
 
-minima:
-  skin: dark
-  date_format: "%b %-d, %Y"
-  social_links:
-    - { platform: github,  user_url: "https://github.com/wo4mei3" }
-    - { platform: twitter, user_url: "https://twitter.com/wo4mei3" }
-
+# minima:
+ # skin: dark
+ # date_format: "%b %-d, %Y"
+  # social_links:
+  #  - { platform: github,  user_url: "https://github.com/wo4mei3" }
+ #   - { platform: twitter, user_url: "https://twitter.com/wo4mei3" }
