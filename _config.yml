@@ -15,15 +15,15 @@ encoding: utf-8
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: Kuma's blog
 baseurl: "" # For github pages
 description: >- # You can edit footer in _includes/footer.md
-  This is an ultralight demo.
+  This blog is written by wo4mei3.
 
 google_analytics: # Enter your tracking ID. Not available on IPFS
 
 twitter_cards: off # Not available on IPFS. /assets/logo.png required
-twitter_username:
+twitter_username: wo4mei3
 
 # Build settings
 markdown: kramdown
